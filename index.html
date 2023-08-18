@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>noon : Online Shopping Egypt</title>
+    <link rel="stylesheet" href="./bootstrap-5.3.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./CSS/style.css">
+    
+    <script src="./bootstrap-5.3.1-dist/jq/jq.js"></script>
+</head>
+<body class="bg-body-Warning">
+
+<!--Start header -->
+    <header style="background-color: #feee00;" >
+      <nav class="navbar navbar-expand-lg bg-body-Warning "  >
+        <div class="container-fluid" >
+          <a class="navbar-brand" href="#"><img src="./noon-logo-en.svg" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <form class="d-flex w-75 me-2 " role="search">
+              <input class="form-control me-2" type="search" placeholder="What are you looking for?" aria-label="Search">
+              <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
+            </form>
+            <ul class="navbar-nav ms-auto mb-1 mb-lg-0">
+              <li class="nav-item ms-1">
+                <a class="nav-link active " aria-current="page" href="#">العربية</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" ><input type="button" data-bs-toggle="modal" data-bs-target="#SignUpModel" value="Sign Up" style="border: none; background-color: #feee00"><i class="fa-solid fa-user"></i></a>
+              </li>
+              <li class="nav-item ms-1">
+                <a class="nav-link ms-1 " href="#"> Cart <i class="fa-solid fa-cart-shopping"></i></a>
+              </li>
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
+    
+    </header>
+
+
+    <section class=" d-flex justify-content-between p-2">
+      <!-- <div class="row"> -->
+        <div class=" " style="width: 20%;">
+          <a class=" AllCategories nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            All Categories
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#electronics">Electronics</a></li>
+            <li><a class="dropdown-item" href="#men's clothing">Men</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">SUPERMARKET</a></li>
+          </ul>
+        </div>
+
+        <div class="swiper-container  " style="width: 80%;">
+          <div class="swiper-wrapper d-flex flex-row  justify-content-around category">
+            
+            <!-- <div class="swiper-slide"><a href="">SUPERMARKET</a></div> --> 
+            
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+    
+  
+        <!-- <div class=" category w-100 d-flex justify-content-around ">
+          <div class=""><a href="">Electronics</a></div>
+          <div class=""><a href="">Men</a></div>
+          <div class=""><a href="">MOBILES</a></div>
+          <div class=""><a href="">WOMEN</a></div>
+          <div class=""><a href="">BEAUTY&HEALTH</a></div>
+          <div class=""><a href="">SUPERMARKET</a></div>
+        </div> -->
+      <!-- </div> -->
+    </section>
+<!--End header -->
+
+<!-- Start model -->
+    <section class="modelSignUpModel">
+      
+        <div class="modal fade" id="SignUpModel" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content ">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <h1 class="modal-title fs-5 w-50 text-center w-50 m-auto " id="staticBackdropLabel">Create an account</h1>
+                  <h5 class="text-center ">Already have an account?<a data-bs-toggle="modal" data-bs-target="#LoginModel" href="#LoginModel"> Sign In</a></h5>
+                          <hr>
+                          <form>
+                            <div class="error">
+                                  <p></p>
+                          </div>
+                              <div class="mb-3 ">
+                                  <label for="name" class="form-label">name</label>
+                                  <input type="text" class="form-control" id="NameSignUp" name="name">
+                              </div>
+                              <div class="mb-3">
+                                  <label for="email" class="form-label">Email</label>
+                                  <input type="text" class="form-control" id="EmailSignUp" name="email">
+                              </div>
+                  
+                              <div class="mb-3">
+                                  <label for="password" class="form-label">Password</label>
+                                  <input type="password" class="form-control" id="PasswordSignUp" name="password">
+                              </div>
+                              <div class="mb-3">
+                                  <label for="password" class="form-label">Confirm Password</label>
+                                  <input type="password" class="form-control" id="PasswordConSignUp" name="password_confirmation">
+                              </div>
+                          </form>
+                    </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-outline-primary" name="submit" id="SubmitSignUp">Sign Up</button>
+              </div>
+              
+    </section>
+    <section class="modelLoginForm">
+      
+      <div class="modal fade" id="LoginModel" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <h1 class="modal-title fs-5 text-center " >Welcome back! 
+                <br>
+                Sign in to your account
+              </h1>
+              <h5 class="text-center">
+                Don't have an account?
+                <a data-bs-toggle="modal" data-bs-target="#SignUpModel" href="#SignUpModel" > Sign Up</a>
+
+              </h5>
+                <hr>
+                <div class="errorLogin">
+                  <p></p>
+                </div>
+                        <form>
+                          <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="text" class="form-control" id="EmailLogin" name="email">
+                            </div>
+                
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="PasswordLogin" name="password">
+                            </div>
+                        </form>
+                  </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-outline-primary" name="submit" id="SubmitLogin">Login</button>
+            </div>
+            
+    </section>
+<!--End  model -->
+
+<!--Start HOME -->
+    <section id="home" class="h-100 pb-3   bg-body-secondary ">
+      <div class="imgBack"></div>
+      <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active buttonCar" ></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="buttonCar"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" class="buttonCar"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./img/1.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="./img/2.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="./img/3.png" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+    </section>
+
+    <!-- second section -->
+    <section class=" bg-body-secondary m-auto p-2 ">
+      <div class="row  m-1  m-auto">
+        <div class="More reasons to shop col-lg-4 col-md-12 col-sm-12 d-flex flex-wrap  p-2" >
+          <div style="width: 100%;"><h3 class="ps-1">More reasons to shop</h3></div>
+          <div class="card MoreReasons" >
+            <a href=""><img src="./img/Clearance.png" class="card-img-top" alt="..."></a>
+          </div>
+          <div class="card MoreReasons" >
+            <a href=""><img src="./img/bestseller.png" class="card-img-top" alt="..."></a>
+          </div>
+          <div class="card MoreReasons" >
+            <a href=""><img src="./img/topDeals.png" class="card-img-top" alt="..."></a>
+          </div>
+          <div class="card MoreReasons" >
+            <a href=""><img src="./img/newarriv.png" class="card-img-top" alt="..."></a>
+          </div>
+        </div>
+
+        <div class="Weekend mega deals col-lg-4 col-md-12 col-sm-12 d-flex flex-wrap bg-light p-2">
+          <div style="width: 100%;"><h3 class="ps-1">Weekend mega deals</h3></div>
+          <div class="card MoreReasons " >
+            <a href="#"><img src="./img/up75.png" class="card-img-top" alt="..."></a>
+          
+          </div>
+          <div class="card MoreReasons" >
+            <a href="#"><img src="./img/topDeals.png" class="card-img-top" alt="..."></a>
+          
+          </div>
+          <div class="card MoreReasons" >
+            <a href="#"><img src="./img/up40.png" class="card-img-top" alt="..."></a>
+          
+          </div>
+          <div class="card MoreReasons" >
+            <a href="#"><img src="./img/camera.png" class="card-img-top" alt="..."></a>
+          </div>
+          
+        </div>
+
+        <div class="in focus col-lg-4 col-md-12 col-sm-12  ps-4">
+          <div style="width: 100%;"><h3 class="ps-1">in focus</h3></div>
+          <div class="card Weekend bs-body-secondary m-auto" >
+            <a href="#"><img src="./img/55.png" class="card-img-top " alt="..."></a>
+          </div>
+          <div class="card  Weekend bs-body-secondary m-auto " >
+            <a href="#"><img src="./img/grab.png" class="card-img-top " alt="..."></a>
+          </div>
+          
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Back to school offers -->
+    <section class="Back to school offers p-2 m-2" >
+      <div style="width: 100%;" class="d-flex flex-row justify-content-between p-2">
+        <h3 class="ps-1">Back to school offers</h3>
+        <input type="button" class="btn btn btn-secondary" value="SHOP NOW">
+        <!-- <button type="button" class=""></button> -->
+      </div>
+        <div class="offer d-flex flex-wrap  p-3 " style="background-color: lightyellow;">
+          <div class="d-flex ps-3">
+            <div class="card backSchool" >
+            <a href=""><img src="./img/backpack.png" class="card-img-top" alt="..."></a>
+          </div>
+          <div class="card backSchool" >
+            <a href=""><img src="./img/arts.png" class="card-img-top" alt="..."></a>
+          </div>
+          <div class="card backSchool" >
+            <a href=""><img src="./img/homeStudy.png" class="card-img-top" alt="..."></a>
+          </div>
+          <div class="card backSchool" >
+            <a href=""><img src="./img/tablet.png" class="card-img-top" alt="..."></a>
+          </div>
+          <div class="card backSchool" >
+            <a href=""><img src="./img/kidsfashion.png" class="card-img-top" alt="..."></a>
+          </div>
+
+          </div>
+          <div class="d-flex ps-3">
+          <div class="card backSchool" >
+            <a href=""><img src="./img/toys.png" class="card-img-top" alt="..."></a>
+          </div>
+          <div class="card backSchool" >
+            <a href=""><img src="./img/labtop.png" class="card-img-top" alt="..."></a>
+          </div>
+          <div class="card backSchool" >
+            <a href=""><img src="./img/stationery.png" class="card-img-top" alt="..."></a>
+          </div>
+        </div>
+        </div>
+          
+    </section>
+
+    <!-- supermarkets -->
+    <section class="supermarkets p-2 m-2" >
+      <div style="width: 100%;" class="d-flex flex-row justify-content-between p-2">
+        <h3 class="ps-1">SuperMarkets</h3>
+        <input type="button" class="btn btn btn-secondary" value="SHOP NOW">
+        <!-- <button type="button" class=""></button> -->
+      </div>
+        <div class="supermarkets d-flex flex-wrap p-3 " >
+          <div class="d-flex ps-3">
+            <div class="card supermarkets" >
+              <a href=""><img src="./img/baby.png" class="card-img-top" alt="..."></a>
+            </div>
+            <div class="card supermarkets" >
+              <a href=""><img src="./img/homec.png" class="card-img-top" alt="..."></a>
+            </div>
+            <div class="card supermarkets" >
+              <a href=""><img src="./img/snacks.png" class="card-img-top" alt="..."></a>
+            </div>
+            <div class="card supermarkets" >
+              <a href=""><img src="./img/rick.png" class="card-img-top" alt="..."></a>
+            </div>
+            <div class="card supermarkets" >
+              <a href=""><img src="./img/percare.png" class="card-img-top" alt="..."></a>
+            </div>
+          </div>
+          <div class="d-flex ps-3">
+            <div class="card supermarkets" >
+              <a href=""><img src="./img/cand.png" class="card-img-top" alt="..."></a>
+            </div>
+            <div class="card supermarkets" >
+              <a href=""><img src="./img/shopalldeal.png" class="card-img-top" alt="..."></a>
+            </div>
+          </div>
+          
+        </div>
+          
+    </section>
+
+    <!-- Electronics -->
+    <section class="ElectronicsSection p-2 bg-body-secondary" id="electronics">
+      <div style="width: 100%;" class="d-flex flex-row justify-content-between p-2">
+        <h3 class="ps-1">Electronics</h3>
+        <input type="button" class="btn btn btn-secondary" value="SHOP NOW">
+        <!-- <button type="button" class=""></button> -->
+      </div>
+        <div class="Electronics d-flex flex-wrap p-3  center " >
+          
+        </div>
+    </section>
+
+     <!-- Jewelery -->
+     <section class="JewelerySection p-2 pt-3 pb-3   "  id="jewelery">
+      
+        <div style="width: 100%;" class="d-flex flex-row justify-content-between p-2">
+        <h3 class="ps-1">Jewelery</h3>
+        <input type="button" class="btn btn btn-secondary" value="SHOP NOW">
+        <!-- <button type="button" class=""></button> -->
+      </div>
+        <div class="Jewelery d-flex flex-wrap p-3  center " >
+          
+        </div>
+      
+    </section>
+
+    <!-- men's clothing -->
+    <section class="mensSection p-2 pt-3  pb-3 bg-body-secondary " id="men's clothing">
+      
+      <div style="width: 100%;" class="d-flex flex-row justify-content-between p-2">
+      <h3 class="ps-1">men's clothing</h3>
+      <input type="button" class="btn btn btn-secondary" value="SHOP NOW">
+      <!-- <button type="button" class=""></button> -->
+    </div>
+      <div class="mens d-flex flex-wrap p-3  center " >
+        
+      </div>
+    
+  </section>
+  <!-- women's clothing -->
+  <section class="womensSection p-2 pt-3  pb-3  " id="women's clothing">
+      
+    <div style="width: 100%;" class="d-flex flex-row justify-content-between p-2">
+    <h3 class="ps-1">women's clothing</h3>
+    <input type="button" class="btn btn btn-secondary" value="SHOP NOW">
+    <!-- <button type="button" class=""></button> -->
+  </div>
+    <div class="womens d-flex flex-wrap p-3  center " >
+      
+    </div>
+  
+</section>
+
+<!--End HOME -->
+
+
+<!-- footer -->
+<footer class="text-center text-lg-start text-muted bg-secondary mt-3">
+        
+  <section class="">
+    <div class="container text-center text-md-start pt-4 pb-4">
+      
+      <div class="row mt-3">
+        
+        <div class="col-12 col-lg-3 col-sm-12 mb-2 text-center">
+          
+          <h6 class="text-secondry fw-bold mb-2">
+              About Us
+            </h6>
+          <p class="mt-1 text-white-50">
+            Lorem ipsum dolor sit amet consectetur.sit amet
+          </p>
+          <ul class=" navbar-nav mb-4">
+              <li class="nav-item"><p class="mt-1 text-white-50"><span><i class="fa-solid fa-house pe-1 text-light"></i></span> Sharqia,Egypt</p></li>
+              <li class="nav-item"><p class="mt-1 text-white-50"><span><i class="fa-solid fa-phone  pe-1 text-light" ></i></span> 01019799297</p></li>
+              <li class="nav-item"><p class="mt-1 text-white-50"><span><i class="fa-solid fa-envelope pe-1 text-light" ></i></span> <a class="text-white" href="">askermostafa87@gmail.com</a></p></li>
+              
+            </ul>
+
+        </div>
+        
+
+        
+        <div class="col-6 col-sm-4 col-lg-2">
+          <!-- Links -->
+          <h6 class="text-secondry fw-bold mb-2">
+            Navigation
+          </h6>
+          <ul class=" mb-4">
+            <li><a class="text-white-50" href="#">About us</a></li>
+            <li><a class="text-white-50" href="#">Find store</a></li>
+            <li><a class="text-white-50" href="#">Categories</a></li>
+            <li><a class="text-white-50" href="#">Blogs</a></li>
+          </ul>
+        </div>
+        
+
+        
+        <div class="col-6 col-sm-4 col-lg-2">
+          <!-- Links -->
+          <h6 class="text-secondry fw-bold mb-2">
+            Useful Links
+          </h6>
+          <ul class=" mb-4">
+            <li><a class="text-white-50" href="#">Help center</a></li>
+            <li><a class="text-white-50" href="#">Money refund</a></li>
+            <li><a class="text-white-50" href="#">Shipping info</a></li>
+            <li><a class="text-white-50" href="#">Refunds</a></li>
+          </ul>
+        </div>
+        
+
+        
+        <div class="col-6 col-sm-4 col-lg-2">
+          <!-- Links -->
+          <h6 class="text-secondry fw-bold mb-2">
+            Recent Posts
+          </h6>
+          <ul class="mb-4">
+            <li><a class="text-white-50" href="#">Home</a></li>
+            <li><a class="text-white-50" href="#">About</a></li>
+            <li><a class="text-white-50" href="#">Features</a></li>
+            <li><a class="text-white-50" href="#">Blog</a></li>
+            <li><a class="text-white-50" href="#">Works</a></li>
+            <li><a class="text-white-50" href="#">Contacts</a></li>
+          </ul>
+        </div>
+        
+
+        
+        <div class="col-12 col-sm-12 col-lg-3">
+          <!-- Links -->
+           <h6 class="text-secondry fw-bold mb-2">Tags</h6>
+            <a class="btn btn-light btn-sm m-1" href="#">Business</a>
+            <a class="btn btn-light btn-sm m-1" href="#">electronics</a>
+            <a class="btn btn-light btn-sm m-1" href="#">jewelery</a>
+            <a class="btn btn-light btn-sm m-1" href="#">supermarkets</a>
+            <a class="btn btn-light btn-sm m-1" href="#">men's</a>
+            <a class="btn btn-light btn-sm m-1" href="#">woman's</a>
+          </div>
+        </div>
+        
+      </div>
+      
+    </div>
+  </section>
+
+
+  <div class="">
+    <div class="container">
+      <div class="d-flex justify-content-between py-4 border-top">
+        <div>
+          <h5>&copy; Mostafa Askar</h5>
+        </div>
+        <div class="d-flex" >
+          <a href="#"><i class="fa-brands fa-facebook pe-3 text-light fs-4" ></i></a>
+          <a href="#"><i class="fa-brands fa-twitter pe-3 text-light fs-4"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram pe-3 text-light fs-4" ></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin pe-3 text-light fs-4" ></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- End footer -->
+
+
+
+
+
+
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<script>
+var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 3,
+    spaceBetween: 10,
+    freeMode: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+</script>
+    <script src="./JS/SignUp.js"></script>
+    <script src="./JS/Login.js"></script>
+    <script src="./JS/main.js"></script>
+    <script src="./bootstrap-5.3.1-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
